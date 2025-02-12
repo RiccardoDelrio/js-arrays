@@ -53,8 +53,14 @@ for (let i = 0; i < teachers.length; i++) {
 
   if (i < teachers.length - 1) {
     teachersString += `${element}, `
+
   } else {
     teachersString += element
   }
 }
 console.log(teachersString)
+
+teachersString = teachers.join(", ")
+
+console.log(teachersString)
+
