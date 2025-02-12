@@ -10,67 +10,63 @@ const teachers = [
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
-
-
-/*  const reversedTeachers = teachers.reverse()
- console.log(reversedTeachers); */
-
-let reversedTeachers = [];
+// const reversedTeachers = teachers.reverse()
+// console.log(reversedTeachers);
+const reversedTeachers = [];
 for (let i = teachers.length - 1; i >= 0; i--) {
   reversedTeachers.push(teachers[i]);
 }
-
 console.log(reversedTeachers);
 
 
+// 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
+// con un nome di lunghezza maggiore o uguale a 5 caratteri
 
-// // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
-// // con un nome di lunghezza maggiore o uguale a 5 caratteri
-// const longNames = []
-// for (let i = 0; i < teachers.length; i++) {
-//   const singol_teachers = teachers[i];
-//   console.log(singol_teachers);
-//   if (singol_teachers.length >= 5) {
-//     longNames.push(singol_teachers)
-//   }
-//   console.log(longNames);
-// }
+const longNames = []
+for (let i = 0; i < teachers.length; i++) {
+  const singol_teachers = teachers[i];
 
+  if (singol_teachers.length >= 5) {
+    longNames.push(singol_teachers)
 
-// // 3. Rimuovi 'Ed' dall'array teachers
-// teachers.splice(1, 1)
-// console.log(teachers);
+  }
+
+}
+console.log(longNames);
 
 
-// // 4. Verifica se 'Fabio' è presente nell'array teachers
-// // e salva il risultato nella variabile isFabioPresent
-// let isFabioPresent = false;
-// for (let i = 0; i < teachers.length; i++) {
-//   console.log(teachers[i]);
-//   if (teachers[i] === 'Fabio') {
-//     isFabioPresent = true;
-//   }
-// }
-
-// console.log(isFabioPresent)
+// 3. Rimuovi 'Ed' dall'array teachers
+teachers.splice(1, 1)
+console.log(teachers);
 
 
+// 4. Verifica se 'Fabio' è presente nell'array teachers
+// e salva il risultato nella variabile isFabioPresent
+let isFabioPresent = false;
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] === 'Fabio') {
+    isFabioPresent = true;
+  }
+}
 
-// // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-// let teachersString = ""
-// for (let i = 0; i < teachers.length; i++) {
-//   const element = teachers[i];
+console.log(isFabioPresent)
 
-//   if (i < teachers.length - 1) {
-//     teachersString += `${element}, `
 
-//   } else {
-//     teachersString += element
-//   }
-// }
-// console.log(teachersString)
 
-// teachersString = teachers.join(", ")
+// 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
+let teachersString = ""
+for (let i = 0; i < teachers.length; i++) {
+  const element = teachers[i];
 
-// console.log(teachersString)
+  if (i < teachers.length - 1) {
+    teachersString += `${element}, `
+
+  } else {
+    teachersString += element
+  }
+}
+
+teachersString = teachers.join(", ")
+
+console.log(teachersString)
 
