@@ -10,9 +10,12 @@ const teachers = [
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
+
 // const reversedTeachers = teachers.reverse()
 // console.log(reversedTeachers);
 const reversedTeachers = [];
+console.log(teachers.length);
+
 for (let i = teachers.length - 1; i >= 0; i--) {
   reversedTeachers.push(teachers[i]);
 }
@@ -36,7 +39,7 @@ console.log(longNames);
 
 
 // 3. Rimuovi 'Ed' dall'array teachers
-teachers.splice(1, 1)
+teachers.splice(teachers.indexOf("Ed"), 1)
 console.log(teachers);
 
 
@@ -65,6 +68,7 @@ for (let i = 0; i < teachers.length; i++) {
     teachersString += element
   }
 }
+console.log(teachersString)
 
 teachersString = teachers.join(", ")
 
